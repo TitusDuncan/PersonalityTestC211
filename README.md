@@ -1,5 +1,5 @@
 # PersonalityTestC211
-**Contributers** 
+**Contributors** 
 Titus Duncan, Jack Ventura, Matt Molewyk
 **Brief Description** 
 The aim of this project is to create a java program for a that implements a personality test

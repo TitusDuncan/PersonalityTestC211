@@ -1,14 +1,20 @@
+// Titus Duncan, Jack Ventura, Matt Molewyk / C211 Project, Fall 2023
+
 package application;
+
+import java.util.LinkedList;
+import java.util.List;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import java.util.LinkedList;
-import java.util.List;
 
 public class DnDPersonalityTest extends Application {
 	private int totalScore = 0; // used to determine the personality type
@@ -20,45 +26,69 @@ public class DnDPersonalityTest extends Application {
 	}
 
 	@Override
+	//Questions and Answer Choices
 	public void start(Stage primaryStage) {
 		primaryStage.setTitle("Dungeons & Dragons: Personality Test");
 
 		//Questions are added to the linkedList for the personality test
 		questions = new LinkedList<>();
-		questions.add(new Question(
-				"Q1. You find yourself in a dark dungeon as a shadowy figure approaches. What do you do?\n"
-						+ "   - A) Sneak past them without being seen. \n" 
-						+ "   - B) Confront the figure head on. \n"
-						+ "   - C) Study the figure and consider your options before taking action.\n",
-				new int[] { 1, 2, 3 }));
-		questions.add(new Question(
-				"Q2.You encounter a locked chest possessing unknown contents. What do you do?\n"
-						+ "   - A) You pick the lock on the chest.\n" 
-						+ "   - B) You smash the chest open.\n"
-						+ "   - C) You carefully search for booby traps or magical wards before touching the chest.",
-				new int[] { 1, 2, 3 }));
-		questions.add(new Question(
-				"Q3. You must duel a fierce opponent. How you do approach the battle?\n"
-				+ "   - A) You focus on cunning and speed, striking at the enemy before they have time to react.\n"
-				+ "   - B) You overpower the enemy with the sheer force of your blows.\n"
-				+ "   - C) You tactically defeat your enemy using magic to control the battlefield.",
-				new int[] { 1, 2, 3 }));
-		questions.add(new Question("Q4. You may a carry one weapon into battle. What do you choose?\n"
-				+ "   - A) A set of sharp glaives.\n" 
-				+ "   - B) A massive greatsword.\n"
-				+ "   - C) A staff possessing magical properties.", new int[] { 1, 2, 3 }));
-		questions.add(new Question(
-				"Q5. Your adventuring party thinks of you as:\n" + "   - A) The quickest group member.\n"
-						+ "   - B) The strongest group member.\n" + "   - C) The most intelligent group member.",
-				new int[] { 1, 2, 3 }));
 		
+		// Question 1	
+		questions.add(new Question(
+		    "Q1. You find yourself in a dark dungeon as a shadowy figure approaches. What do you"
+		        + " do?\n\n"
+			    // Answer choices for Question 1
+				+ "   - A) Sneak past them without being seen. \n"
+				+ "   - B) Confront the figure head on. \n"
+				+ "   - C) Study the figure and consider your options before taking action.\n",
+				    new int[] { 1, 2, 3 }));
+		
+		// Question 2
+		questions.add(new Question(
+		    "Q2.You encounter a locked chest possessing unknown contents. What do you do?\n\n "
+		        // Answer choices for Question 2
+				+ "   - A) You pick the lock on the chest.\n"
+		 	    + "   - B) You smash the chest open.\n"
+				+ "   - C) You carefully search for booby traps or magical wards before touching"
+				    + " the chest.",
+					new int[] { 1, 2, 3 }));
+		
+		// Question 3
+		questions.add(new Question(
+			"Q3. You must duel a fierce opponent. How you do approach the battle?\n\n"
+		        // Answer choices for Question 3
+				+ "   - A) You focus on cunning and speed, striking at the enemy before they have"
+				    + " time to react.\n"
+				+ "   - B) You overpower the enemy with the sheer force of your blows.\n"
+				+ "   - C) You tactically defeat your enemy using magic to control the "
+				+ "battlefield.",
+					new int[] { 1, 2, 3 }));
+		
+		// Question 4
+		questions.add(new Question(
+			"Q4. You may a carry one weapon into battle. What do you choose?\n\n"
+		        // Answer choices for Question 4
+				+ "   - A) A set of sharp glaives.\n"
+				+ "   - B) A massive greatsword.\n"
+				+ "   - C) A staff possessing magical properties.",
+				    new int[] { 1, 2, 3 }));
+		
+		// Question 5
+		questions.add(new Question(
+			"Q5. Your adventuring party thinks of you as:\n\n"
+		        // Answer choices for Question 5
+		        + "   - A) The quickest group member.\n"
+				+ "   - B) The strongest group member.\n" 
+		        + "   - C) The most intelligent group member.",
+					new int[] { 1, 2, 3 }));
+
 		displayQuestion(primaryStage);
 
 		primaryStage.show();
 	}
 
-
-	 // This method displays the question in the primary stage
+	// This method displays the question in the primary stage
+	// below are the settings for the GUI
 	private void displayQuestion(Stage primaryStage) {
 		if (currentQuestionIndex < questions.size()) {
 			VBox vbox = new VBox(10);

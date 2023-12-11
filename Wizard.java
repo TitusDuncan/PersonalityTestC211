@@ -1,3 +1,5 @@
+// Titus Duncan, Jack Ventura, Matt Molewyk / C211 Project, Fall 2023
+
 package application;
 
 //subclass of personality. Used to create a Wizard personality object

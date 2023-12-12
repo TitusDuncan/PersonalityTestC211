@@ -1,5 +1,10 @@
 // Titus Duncan, Jack Ventura, Matt Molewyk / C211 Project, Fall 2023
 
+// This class contains the main method used to launch the application.
+// Titus Duncan was the main contributor to the code for the GUI and methods of this class. 
+// Jack came up with the questions used for the test.
+// Matt added the documentation. All contributors approved the final code as a team.
+
 package application;
 
 import java.util.LinkedList;

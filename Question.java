@@ -14,18 +14,21 @@ class Question {
 	private int[] scoring;
 	
 	// Constructor for personality test questions
-	public Question(String question, int[] scoring) {
+	public Question(String question, int[] scoring) 
+	{
 		this.question = question;
 		this.scoring = scoring;
 	}
 	
 	// Return a question from the personality test
-	public String getQuestion() {
+	public String getQuestion() 
+	{
 		return question;
 	}
 	
 	// Return the total score from the personality test
-	public int[] getScoring() {
+	public int[] getScoring() 
+	{
 		return scoring;
 	}
 }

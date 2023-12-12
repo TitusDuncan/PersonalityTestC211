@@ -1,4 +1,8 @@
-// Titus Duncan, Jack Ventura, Matt Molewyk / C211 Project, Fall 2023
+/*Titus Duncan, Jack Ventura, Matt Molewyk / C211 Project, Fall 2023
+ * 
+ * Matt Molewyk was the main contributor to the code and methods of this class.
+ * All contributors approved the final code as a team.
+*/
 
 package application;
 
